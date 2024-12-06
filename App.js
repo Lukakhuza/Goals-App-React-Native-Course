@@ -10,6 +10,7 @@ export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
 
   function startAddGoalHandler() {
+    console.log("Adding Goal");
     setModalIsVisible(true);
   }
 
@@ -27,6 +28,8 @@ export default function App() {
 
   function deleteGoalHandler(id) {
     setCourseGoals((currentCourseGoals) => {
+      // console.log(currentCourseGoals);
+      // return currentCourseGoals;
       return currentCourseGoals.filter((goal) => goal.id !== id);
     });
   }
@@ -65,8 +68,9 @@ export default function App() {
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
-    backgroundColor: "white",
+    // backgroundColor: "#1e085a",
     // marginTop: 40,
+    backgroundColor: "#CBC3E3",
     paddingTop: 50,
     paddingHorizontal: 30,
   },
